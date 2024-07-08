@@ -1,0 +1,46 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'org.divyansh'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+group 'com.entangled'
+version '1.0.0'
+mainClassName = "Main"
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+/*Below libraries are used by Material Library*/
+    //Timing framework
+    implementation 'net.java.dev.timingframework:timingframework:1.0'
+    //Jetbrains annotations
+    implementation 'org.jetbrains:annotations:23.0.0'
+    //SLF4j
+    implementation 'org.slf4j:slf4j-simple:2.0.3'
+    //MIGLAYOUT
+    implementation 'com.miglayout:miglayout-swing:11.0'
+
+    //JhLabs filters
+    implementation 'com.jhlabs:filters:2.0.235-1'
+
+    //JNA
+    implementation 'net.java.dev.jna:jna:5.12.1'
+    implementation 'net.java.dev.jna:jna-platform:5.12.1'
+
+    //IKONLI
+    implementation 'org.kordamp.ikonli:ikonli-core:12.3.1'
+    implementation 'org.kordamp.ikonli:ikonli-fluentui-pack:12.3.1'
+    implementation 'org.kordamp.ikonli:ikonli-materialdesign2-pack:12.3.1'
+    implementation 'org.kordamp.ikonli:ikonli-swing:12.3.1'
+    implementation 'org.kordamp.ikonli:ikonli-bootstrapicons-pack:12.3.1'
+
+}
+
+test {
+    useJUnitPlatform()
+}
